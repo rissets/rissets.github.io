@@ -14,4 +14,4 @@ tech:
 showInProjects: true
 ---
 
-Collaborated with the [Developer Team](https://risset.social/id/#contact) to develop the front-end and deploy the website on Heroku for a pro-bono legal startup [Caim Consulting](https://risset.social).
+Collaborated with the [Developer Team](https://risset.social/id/#contact) to develop the front-end and deploy the website on Heroku for a pro-bono legal startup [Portfolio Generate](https://risset.social).

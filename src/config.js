@@ -20,7 +20,7 @@ module.exports = {
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/danang-haris-setiawan-darisset/',
+      url: 'https://www.linkedin.com/in/danangharis/',
     },
     {
       name: 'Instagram',
