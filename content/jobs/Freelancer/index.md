@@ -1,9 +1,9 @@
 ---
 date: '2021-07-07'
-title: 'Freelance Web Developer'
-company: 'Freelancer'
+title: 'Freelance Web Developer & Data Analyst'
+company: 'Fiverr'
 range: 'July 2021 - Present'
-url: 'https://www.freelancer.com'
+url: 'https://www.fiverr.com/danangharis'
 ---
 
-- Creating Website as a freelancer for platform giant [Freelancer](https://www.freelancer.com).
+- Creating Website as a freelancer for platform giant [Fiverr](https://www.fiverr.com/danangharis).
