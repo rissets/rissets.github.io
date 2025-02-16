@@ -1,5 +1,5 @@
 ---
-date: '09-08-2023'
+date: '19-8-2023'
 title: 'On Farming'
 cover: 'demo1.jpg'
 github: 'https://github.com/rissets'

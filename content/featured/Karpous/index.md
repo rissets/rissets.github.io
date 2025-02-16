@@ -1,5 +1,5 @@
 ---
-date: '03-01-2024'
+date: '13-01-2024'
 title: 'Karpous Real World Asset (RWA)'
 cover: 'demo1.jpg'
 github: 'https://github.com/rissets'
