@@ -1,17 +1,17 @@
 ---
-date: '10-01-2023'
+date: '03-01-2024'
 title: 'Karpous Real World Asset (RWA)'
 cover: 'demo1.jpg'
-github: '-'
-external: ''
+github: 'https://github.com/rissets'
+external: 'https://hi.rissets.com'
 tech:
   - Django
+  - PostgreSQL
   - Python
   - Javascript
   - React
-  - PostgreSQL
-  - Grpc
   - Kubernetes
+  - Redis
 showInProjects: true
 ---
 

@@ -1,17 +1,17 @@
 ---
-date: '11-12-2023'
+date: '12-09-2024'
 title: 'Fairway Golf Engine'
 cover: 'demo-fairway.jpg'
-github: '-'
-external: ''
+github: 'https://github.com/rissets'
+external: 'https://hi.rissets.com'
 tech:
   - Django
+  - PostGis
   - Python
+  - Torch
+  - PINN
+  - Genesis
   - Javascript
-  - React
-  - PostgreSQL
-  - Grpc
-  - Kubernetes
 showInProjects: true
 ---
 

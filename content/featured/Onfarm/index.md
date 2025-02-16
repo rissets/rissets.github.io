@@ -1,16 +1,17 @@
 ---
-date: '11-2-2023'
-title: 'Smart Farming'
-cover: 'demo1.jpg'
-github: '-'
-external: ''
+date: '09-08-2023'
+title: 'On Farming'
+cover: 'demo1.png'
+github: 'https://github.com/rissets'
+external: 'https://hi.rissets.com'
 tech:
   - Django
-  - Python
-  - Javascript
+  - MPTT
   - Grafana
   - IoT
-  - Postgis
+  - Grpc
+  - Python
+  - Javascript
 showInProjects: true
 ---
 
