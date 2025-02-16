@@ -1,5 +1,5 @@
 ---
-date: '1'
+date: '11-12-2022'
 title: 'Portfolio Generate'
 cover: 'demo1.png'
 github: 'https://github.com/danangharissetiawan/risset.tech'
