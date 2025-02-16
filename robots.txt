@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://danangharissetiawan.github.io/sitemap/sitemap-index.xml
-Host: https://danangharissetiawan.github.io
+Sitemap: https://hi.rissets.com/sitemap/sitemap-index.xml
+Host: https://hi.rissets.com
