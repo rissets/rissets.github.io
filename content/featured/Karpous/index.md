@@ -3,7 +3,7 @@ date: '03-01-2024'
 title: 'Karpous Real World Asset (RWA)'
 cover: 'demo1.jpg'
 github: 'https://github.com/rissets'
-external: 'https://hi.rissets.com'
+external: 'https://hi.rissets.com/'
 tech:
   - Django
   - PostgreSQL

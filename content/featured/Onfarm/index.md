@@ -3,7 +3,7 @@ date: '09-08-2023'
 title: 'On Farming'
 cover: 'demo1.png'
 github: 'https://github.com/rissets'
-external: 'https://hi.rissets.com'
+external: 'https://hi.rissets.com/'
 tech:
   - Django
   - MPTT

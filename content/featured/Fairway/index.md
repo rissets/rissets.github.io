@@ -3,7 +3,7 @@ date: '12-09-2024'
 title: 'Fairway Golf Engine'
 cover: 'demo-fairway.jpg'
 github: 'https://github.com/rissets'
-external: 'https://hi.rissets.com'
+external: 'https://hi.rissets.com/'
 tech:
   - Django
   - PostGis
