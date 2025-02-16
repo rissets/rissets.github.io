@@ -4,19 +4,19 @@ module.exports = {
     'Danang Haris Setiawan is a Software Engineer, who loves learning new things and helping tech beginners.',
   siteKeywords:
     'Danang Haris Setiawan, Danang Haris, Risset, Darisset, software engineer, web developer, data analysis, web developer, javascript, danang haris github, portfolio danang haris, risset social, DHS, sikwa dafica indah yuniarta, haris',
-  siteUrl: 'https://danangharissetiawan.github.io/',
+  siteUrl: 'https://hi.rissets.com',
   siteLanguage: 'en_US',
   googleAnalyticsID: 'UA-162553650-2',
   googleVerification: 'google-site-verification=JYYngNZL55JU67S6KYbLwZXFC7SbNYqLVU5Xipz9tK8',
   name: 'Danang Haris Setiawan',
   location: 'Tuban, East Java, Indonesia',
-  email: 'mr.danangharis@gmail.com',
-  github: 'https://github.com/danangharissetiawan',
-  twitterHandle: '@danangharisset1',
+  email: 'hi@rissets.com',
+  github: 'https://github.com/rissets',
+  twitterHandle: '@_risset',
   socialMedia: [
     {
       name: 'GitHub',
-      url: 'https://github.com/danangharissetiawan',
+      url: 'https://github.com/rissets',
     },
     {
       name: 'Linkedin',
@@ -24,11 +24,11 @@ module.exports = {
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/mr.danang_haris/',
+      url: 'https://www.instagram.com/_rissets/',
     },
     {
       name: 'Twitter',
-      url: 'https://twitter.com/Danangharisset1',
+      url: 'https://twitter.com/_risset',
     },
   ],
 
