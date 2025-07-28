@@ -13,4 +13,4 @@ I am a passionate Software Engineer dedicated to creating software solutions tha
 
 As a Computer Science graduate, I possess a solid technical foundation for designing efficient and scalable system architectures. Beyond my professional work, I actively contribute to the tech community by sharing my knowledge and insights through online technical articles.
 
-I'm always open to discussing new ideas and potential collaborations, especially over a cup of coffee ☕. Please feel free to reach out. 🥰
+I'm always open to discussing new ideas and potential collaborations, especially over a cup of coffee ☕. Please feel free to reach out.
