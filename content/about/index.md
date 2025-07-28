@@ -2,16 +2,15 @@
 title: 'About Me'
 avatar: 'me.jpg'
 skills:
-  - Python Enterprise
-  - Django & Flutter
-  - Jenkins (CI/CD)
-  - Web Developer & Data Analysis
-  - PyTest & Unittest
-  - VS Code & Android Studio
+  - Python, Go, Javascript
+  - Django, Flutter, React
+  - ML, DL, NLP
+  - GCloud, AWS
+  - VS Code & NVIM
 ---
 
-Hey everyone! I'm a software engineer with a serious passion for both software development and the world of AI. My coding journey started back in high school, and I've been hooked ever since. I honed my skills studying Computer Science and Engineering at UDINUS (2020-2023), where I explored everything from web development to machine learning.
+I am a passionate Software Engineer dedicated to creating software solutions that are not only functional but also intelligent and intuitive. My core expertise lies at the intersection of software engineering and machine learning, where I design and integrate AI models to build data-driven applications that deliver enhanced value to users.
 
-These days, I'm leading the backend development team at Orbit. I've also had some awesome experiences, like being a scrum developer for the Research Social Project (Risset Social). There, I got to dive deep into microservices development and testing.
+As a Computer Science graduate, I possess a solid technical foundation for designing efficient and scalable system architectures. Beyond my professional work, I actively contribute to the tech community by sharing my knowledge and insights through online technical articles.
 
-Outside of the coding world, you'll probably find me curled up with a good book or fueling up with a fresh cup of coffee. Speaking of which, feel free to let me know if you ever want to grab a coffee and chat!
+I'm always open to discussing new ideas and potential collaborations, especially over a cup of coffee ☕. Please feel free to reach out. 🥰
