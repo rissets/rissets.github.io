@@ -9,10 +9,11 @@ tech:
   - MPTT
   - Grafana
   - IoT
-  - Grpc
+  - gRPC
   - Python
   - Javascript
+  - REST APIs
 showInProjects: true
 ---
 
-I'm part of the team developing a Smart Farming App that's revolutionizing agricultural investment. We're connecting investors and farmers through a platform that provides real-time monitoring, reporting, and verifiable results. Think of it as bringing transparency and efficiency to the entire cultivation process. As a backend developer on the project, I'm responsible for designing the architecture for the mobile and admin applications, as well as integrating everything with our IoT devices.
+As a key backend developer, I was part of the team developing a Smart Farming App to revolutionize agricultural investment. The platform connects investors and farmers, providing real-time monitoring, reporting, and verifiable results. I was responsible for designing the backend architecture for both the mobile and admin applications, and for integrating the system with various IoT devices to stream and process live data from the fields, bringing transparency and efficiency to the cultivation process.

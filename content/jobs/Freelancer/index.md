@@ -2,7 +2,7 @@
 date: '2021-07-07'
 title: 'Freelance Web Developer & Data Analyst'
 company: 'Fiverr'
-range: 'July 2021 - Present'
+range: 'July 2021 - 2023'
 url: 'https://www.fiverr.com/danangharis'
 ---
 
