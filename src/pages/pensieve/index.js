@@ -7,7 +7,7 @@ import { Layout } from '@components';
 import { IconZap } from '@components/icons';
 import styled from 'styled-components';
 import { theme, mixins, media, Main } from '@styles';
-const { colors, fontSizes, fonts } = theme;
+const { fontSizes, fonts } = theme;
 
 const StyledMainContainer = styled(Main)`
   & > header {
@@ -51,7 +51,7 @@ const StyledPostInner = styled.div`
   height: 100%;
   border-radius: ${theme.borderRadius};
   transition: ${theme.transition};
-  background-color: ${colors.lightNavy};
+  background-color: ${props => props.theme.colors.lightNavy};
   header,
   a {
     width: 100%;
@@ -73,7 +73,7 @@ const StyledPostHeader = styled.div`
   margin-bottom: 30px;
 `;
 const StyledFolder = styled.div`
-  color: ${colors.green};
+  color: ${props => props.theme.colors.green};
   svg {
     width: 40px;
     height: 40px;
@@ -82,17 +82,17 @@ const StyledFolder = styled.div`
 const StyledPostName = styled.h5`
   margin: 0 0 10px;
   font-size: ${fontSizes.xxl};
-  color: ${colors.lightestSlate};
+  color: ${props => props.theme.colors.lightestSlate};
 `;
 const StyledPostDescription = styled.div`
   font-size: 17px;
-  color: ${colors.lightSlate};
+  color: ${props => props.theme.colors.lightSlate};
 `;
 const StyledDate = styled.span`
   text-transform: uppercase;
   font-family: ${fonts.SFMono};
   font-size: ${fontSizes.xs};
-  color: ${colors.lightSlate};
+  color: ${props => props.theme.colors.lightSlate};
 `;
 const StyledTags = styled.ul`
   display: flex;
@@ -105,7 +105,7 @@ const StyledTags = styled.ul`
   li {
     font-family: ${fonts.SFMono};
     font-size: ${fontSizes.xs};
-    color: ${colors.green};
+    color: ${props => props.theme.colors.green};
     line-height: 1.75;
     margin-right: 15px;
     &:last-of-type {
@@ -123,8 +123,8 @@ const PensievePage = ({ location, data }) => {
   return (
     <Layout location={location}>
       <Helmet>
-        <title>Pensieve | Chandrika Deb</title>
-        <link rel="canonical" href="https://chandrikadeb7.github.io/pensieve" />
+        <title>Pensieve | Danang Haris Setiawan</title>
+        <link rel="canonical" href="https://hi.rissets.com/pensieve" />
       </Helmet>
 
       <StyledMainContainer>
@@ -134,7 +134,8 @@ const PensievePage = ({ location, data }) => {
             <a
               href="https://www.wizardingworld.com/writing-by-jk-rowling/pensieve"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+            >
               a collection of memories
             </a>
           </p>
@@ -194,7 +195,7 @@ export const pageQuery = graphql`
   {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/posts/" }, frontmatter: { draft: { ne: true } } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       edges {
         node {

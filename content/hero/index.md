@@ -1,8 +1,8 @@
 ---
-title: 'Hello World! My name is'
+title: 'Hi, my name is'
 name: 'Danang Haris Setiawan'
-subtitle: 'I love exploring new things!'
-buttonText: 'Hire Me!'
+subtitle: 'I build intelligent software solutions.'
+buttonText: 'Get In Touch'
 ---
 
-I'm a Software Engineer with a passion for using machine learning to build smarter, more intuitive applications. A Computer Science graduate and active tech writer, I'm always open to connecting over new ideas—especially over coffee ☕
+I'm an AI Engineer & Backend Developer specializing in building production-grade AI systems — from face recognition engines and agentic AI simulators to physics-informed neural networks and real-world asset platforms. I architect scalable solutions where machine learning meets robust software engineering.

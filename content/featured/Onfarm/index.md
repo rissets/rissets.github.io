@@ -1,6 +1,6 @@
 ---
-date: '19-8-2023'
-title: 'On Farming'
+date: '2023-08-19'
+title: 'OnFarm — Smart Farming IoT Platform'
 cover: 'demo1.jpg'
 github: 'https://github.com/rissets'
 external: 'https://hi.rissets.com/'
@@ -11,9 +11,8 @@ tech:
   - IoT
   - gRPC
   - Python
-  - Javascript
   - REST APIs
 showInProjects: true
 ---
 
-As a key backend developer, I was part of the team developing a Smart Farming App to revolutionize agricultural investment. The platform connects investors and farmers, providing real-time monitoring, reporting, and verifiable results. I was responsible for designing the backend architecture for both the mobile and admin applications, and for integrating the system with various IoT devices to stream and process live data from the fields, bringing transparency and efficiency to the cultivation process.
+Designed the core backend architecture for a smart farming application connecting investors and farmers through real-time, verifiable data. Integrated various IoT devices to stream and process live field data, enhancing transparency and operational efficiency in the agricultural investment process. Built monitoring dashboards with Grafana for real-time crop analytics.

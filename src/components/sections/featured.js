@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import sr from '@utils/sr';
 import { srConfig } from '@config';
 import { FormattedIcon } from '@components/icons';
 import styled from 'styled-components';
 import { theme, mixins, media, Section, Heading } from '@styles';
-const { colors, fontSizes, fonts } = theme;
+const { fontSizes, fonts } = theme;
 
 const StyledContainer = styled(Section)`
   ${mixins.flexCenter};
@@ -27,7 +27,7 @@ const StyledContent = styled.div`
 const StyledLabel = styled.h4`
   font-size: ${fontSizes.smish};
   font-weight: normal;
-  color: ${colors.green};
+  color: ${props => props.theme.colors.green};
   font-family: ${fonts.SFMono};
   margin-top: 10px;
   padding-top: 0;
@@ -35,9 +35,9 @@ const StyledLabel = styled.h4`
 const StyledProjectName = styled.h5`
   font-size: 28px;
   margin: 0 0 20px;
-  color: ${colors.lightestSlate};
+  color: ${props => props.theme.colors.lightestSlate};
   ${media.tablet`font-size: 24px;`};
-  ${media.thone`color: ${colors.white};`};
+  ${media.thone`color: ${props => props.theme.colors.white};`};
   a {
     ${media.tablet`display: block;`};
   }
@@ -47,8 +47,8 @@ const StyledDescription = styled.div`
   position: relative;
   z-index: 2;
   padding: 25px;
-  background-color: ${colors.lightNavy};
-  color: ${colors.lightSlate};
+  background-color: ${props => props.theme.colors.lightNavy};
+  color: ${props => props.theme.colors.lightSlate};
   font-size: ${fontSizes.lg};
   border-radius: ${theme.borderRadius};
   ${media.thone`
@@ -78,7 +78,7 @@ const StyledTechList = styled.ul`
   li {
     font-family: ${fonts.SFMono};
     font-size: ${fontSizes.smish};
-    color: ${colors.green};
+    color: ${props => props.theme.colors.green};
     margin-right: ${theme.margin};
     margin-bottom: 7px;
     white-space: nowrap;
@@ -86,7 +86,7 @@ const StyledTechList = styled.ul`
       margin-right: 0;
     }
     ${media.thone`
-      color: ${colors.green};
+      color: ${props => props.theme.colors.green};
       margin-right: 10px;
     `};
   }
@@ -97,7 +97,7 @@ const StyledLinkWrapper = styled.div`
   position: relative;
   margin-top: 10px;
   margin-left: -10px;
-  color: ${colors.lightestSlate};
+  color: ${props => props.theme.colors.lightestSlate};
   a {
     padding: 10px;
     svg {
@@ -106,7 +106,7 @@ const StyledLinkWrapper = styled.div`
     }
   }
 `;
-const StyledFeaturedImg = styled(Img)`
+const StyledFeaturedImg = styled(GatsbyImage)`
   width: 100%;
   max-width: 100%;
   vertical-align: middle;
@@ -127,7 +127,7 @@ const StyledImgContainer = styled.a`
   grid-row: 1 / -1;
   position: relative;
   z-index: 1;
-  background-color: ${colors.green};
+  background-color: ${props => props.theme.colors.green};
   border-radius: ${theme.radius + 1}px;
   transition: ${theme.transition};
   ${media.tablet`height: 100%;`};
@@ -155,7 +155,7 @@ const StyledImgContainer = styled.a`
     bottom: 0;
     z-index: 3;
     transition: ${theme.transition};
-    background-color: ${colors.navy};
+    background-color: ${props => props.theme.colors.navy};
     mix-blend-mode: screen;
   }
 `;
@@ -234,7 +234,8 @@ const Featured = ({ data }) => {
                         href={external}
                         target="_blank"
                         rel="nofollow noopener noreferrer"
-                        aria-label="External Link">
+                        aria-label="External Link"
+                      >
                         {title}
                       </a>
                     ) : (
@@ -255,7 +256,8 @@ const Featured = ({ data }) => {
                         href={github}
                         target="_blank"
                         rel="nofollow noopener noreferrer"
-                        aria-label="GitHub Link">
+                        aria-label="GitHub Link"
+                      >
                         <FormattedIcon name="GitHub" />
                       </a>
                     )}
@@ -264,7 +266,8 @@ const Featured = ({ data }) => {
                         href={external}
                         target="_blank"
                         rel="nofollow noopener noreferrer"
-                        aria-label="External Link">
+                        aria-label="External Link"
+                      >
                         <FormattedIcon name="External" />
                       </a>
                     )}
@@ -274,8 +277,9 @@ const Featured = ({ data }) => {
                 <StyledImgContainer
                   href={external ? external : github ? github : '#'}
                   target="_blank"
-                  rel="nofollow noopener noreferrer">
-                  <StyledFeaturedImg fluid={cover.childImageSharp.fluid} alt={title} />
+                  rel="nofollow noopener noreferrer"
+                >
+                  <StyledFeaturedImg image={getImage(cover)} alt={title} />
                 </StyledImgContainer>
               </StyledProject>
             );

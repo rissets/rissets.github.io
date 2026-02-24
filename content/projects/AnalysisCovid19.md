@@ -1,14 +1,15 @@
 ---
-date: '2020-0409-30'
+date: '2020-04-30'
 title: 'Analysis Covid-19'
 github: 'https://github.com/danangharissetiawan/analysis-covid19-python'
 external: ''
 tech:
   - Python
-  - Numpy
+  - NumPy
   - Matplotlib
+  - Pandas
 company: ''
 showInProjects: true
 ---
 
-Covid-19 analysis to track improvements in multiple countries.
+Data analysis project tracking Covid-19 trends and recovery patterns across multiple countries using Python data science tools.

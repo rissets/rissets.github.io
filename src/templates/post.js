@@ -5,8 +5,7 @@ import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
 import { Layout } from '@components';
 import styled from 'styled-components';
-import { Main, theme } from '@styles';
-const { colors } = theme;
+import { Main } from '@styles';
 
 const StyledPostContainer = styled(Main)`
   max-width: 1000px;
@@ -31,7 +30,7 @@ const StyledPostContent = styled.div`
   p {
     margin: 1em 0;
     line-height: 1.5;
-    color: ${colors.lightSlate};
+    color: ${props => props.theme.colors.lightSlate};
   }
 `;
 
@@ -43,7 +42,7 @@ const PostTemplate = ({ data, location }) => {
     <Layout location={location}>
       <Helmet>
         <title>{title} | Danang Haris Setiawan</title>
-        <link rel="canonical" href="https://danangharissetiawan.github.io" />
+        <link rel="canonical" href="https://hi.rissets.com" />
       </Helmet>
 
       <StyledPostContainer>
@@ -87,8 +86,8 @@ PostTemplate.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query ($path: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $path } }) {
+  query ($slug: String!) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Layout } from '@components';
 import styled from 'styled-components';
 import { theme, mixins, Main } from '@styles';
-const { colors, fontSizes } = theme;
+const { fontSizes } = theme;
 
 const StyledTagsContainer = styled(Main)`
   max-width: 1000px;
@@ -31,11 +31,11 @@ const StyledTagsContainer = styled(Main)`
         font-size: inherit;
         margin: 0;
         a {
-          color: ${colors.lightSlate};
+          color: ${props => props.theme.colors.lightSlate};
         }
       }
       .subtitle {
-        color: ${colors.slate};
+        color: ${props => props.theme.colors.slate};
         font-size: ${fontSizes.sm};
 
         .tag {
@@ -123,10 +123,10 @@ TagTemplate.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query($tag: String!) {
+  query ($tag: String!) {
     allMarkdownRemark(
       limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount

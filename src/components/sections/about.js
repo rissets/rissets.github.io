@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import sr from '@utils/sr';
 import { srConfig, github } from '@config';
 import styled from 'styled-components';
 import { theme, mixins, media, Section, Heading } from '@styles';
-const { colors, fontSizes, fonts } = theme;
+const { fontSizes, fonts } = theme;
 
 const StyledContainer = styled(Section)`
   position: relative;
@@ -37,12 +37,12 @@ const Skill = styled.li`
   padding-left: 20px;
   font-family: ${fonts.SFMono};
   font-size: ${fontSizes.smish};
-  color: ${colors.green};
+  color: ${props => props.theme.colors.green};
   &:before {
     content: '▹';
     position: absolute;
     left: 0;
-    color: ${colors.green};
+    color: ${props => props.theme.colors.green};
     font-size: ${fontSizes.sm};
     line-height: 12px;
   }
@@ -60,7 +60,7 @@ const StyledPic = styled.div`
     }
   }
 `;
-const StyledAvatar = styled(Img)`
+const StyledAvatar = styled(GatsbyImage)`
   position: relative;
   mix-blend-mode: multiply;
   filter: grayscale(100%) contrast(1);
@@ -72,7 +72,7 @@ const StyledAvatarLink = styled.a`
   width: 100%;
   position: relative;
   border-radius: ${theme.borderRadius};
-  background-color: ${colors.lightestSlate};
+  background-color: ${props => props.theme.colors.lightestSlate};
   margin-left: -20px;
   &:hover,
   &:focus {
@@ -101,11 +101,11 @@ const StyledAvatarLink = styled.a`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: ${colors.navy};
+    background-color: ${props => props.theme.colors.navy};
     mix-blend-mode: screen;
   }
   &:after {
-    border: 2px solid ${colors.green};
+    border: 2px solid ${props => props.theme.colors.green};
     top: 10px;
     left: 10px;
     z-index: -1;
@@ -130,7 +130,7 @@ const About = ({ data }) => {
         </StyledContent>
         <StyledPic>
           <StyledAvatarLink href={github}>
-            <StyledAvatar fluid={avatar.childImageSharp.fluid} alt="Avatar" />
+            <StyledAvatar image={getImage(avatar)} alt="Avatar" />
           </StyledAvatarLink>
         </StyledPic>
       </StyledFlexContainer>

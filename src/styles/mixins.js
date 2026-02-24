@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 import theme from './theme';
 import media from './media';
-const { colors, fontSizes, fonts } = theme;
+const { fontSizes, fonts } = theme;
 
 const mixins = {
   flexCenter: css`
@@ -31,7 +31,7 @@ const mixins = {
     &:hover,
     &:active,
     &:focus {
-      color: ${colors.green};
+      color: ${props => props.theme.colors.green};
       outline: 0;
     }
   `,
@@ -43,17 +43,17 @@ const mixins = {
     position: relative;
     transition: ${theme.transition};
     cursor: pointer;
-    color: ${colors.green};
+    color: ${props => props.theme.colors.green};
     &:hover,
     &:focus,
     &:active {
-      color: ${colors.green};
+      color: ${props => props.theme.colors.green};
       outline: 0;
       &:after {
         width: 100%;
       }
       & > * {
-        color: ${colors.green} !important;
+        color: ${props => props.theme.colors.green} !important;
         transition: ${theme.transition};
       }
     }
@@ -64,16 +64,16 @@ const mixins = {
       height: 1px;
       position: relative;
       bottom: 0.37em;
-      background-color: ${colors.green};
+      background-color: ${props => props.theme.colors.green};
       transition: ${theme.transition};
       opacity: 0.5;
     }
   `,
 
   smallButton: css`
-    color: ${colors.green};
+    color: ${props => props.theme.colors.green};
     background-color: transparent;
-    border: 1px solid ${colors.green};
+    border: 1px solid ${props => props.theme.colors.green};
     border-radius: ${theme.borderRadius};
     padding: 0.75rem 1rem;
     font-size: ${fontSizes.smish};
@@ -85,7 +85,7 @@ const mixins = {
     &:hover,
     &:focus,
     &:active {
-      background-color: ${colors.transGreen};
+      background-color: ${props => props.theme.colors.transGreen};
     }
     &:after {
       display: none !important;
@@ -93,9 +93,9 @@ const mixins = {
   `,
 
   bigButton: css`
-    color: ${colors.green};
+    color: ${props => props.theme.colors.green};
     background-color: transparent;
-    border: 1px solid ${colors.green};
+    border: 1px solid ${props => props.theme.colors.green};
     border-radius: ${theme.borderRadius};
     padding: 1.25rem 1.75rem;
     font-size: ${fontSizes.sm};
@@ -107,7 +107,7 @@ const mixins = {
     &:hover,
     &:focus,
     &:active {
-      background-color: ${colors.transGreen};
+      background-color: ${props => props.theme.colors.transGreen};
     }
     &:after {
       display: none !important;
@@ -122,12 +122,12 @@ const mixins = {
   `,
 
   boxShadow: css`
-    box-shadow: 0 10px 30px -15px ${colors.shadowNavy};
+    box-shadow: 0 10px 30px -15px ${props => props.theme.colors.shadowNavy};
     transition: ${theme.transition};
 
     &:hover,
     &:focus {
-      box-shadow: 0 20px 30px -15px ${colors.shadowNavy};
+      box-shadow: 0 20px 30px -15px ${props => props.theme.colors.shadowNavy};
     }
   `,
 
@@ -144,7 +144,7 @@ const mixins = {
         content: '▹';
         position: absolute;
         left: 0;
-        color: ${colors.green};
+        color: ${props => props.theme.colors.green};
       }
     }
   `,

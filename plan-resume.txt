@@ -1,0 +1,72 @@
+Setiabudi, Jakarta Selatan, Jakarta, Indonesia 12940
+hi@rissets.com
+Danang Haris Setiawan
+(+62) 812-5214-6881
+github.com/rissets
+linkedin.com/in/danangharis
+Education
+Semarang, Indonesia
+Universitas Dian Nuswantoro
+Jun 2020 - Feb 2024
+Degree: Bachelor of Computer Science (GPA: 3.7) | Jun 2020 - Feb 2024
+Programming Coursework:  Python, Golang, Javascript, Data Structures, Software Engineering, Algorithms and Complexity, Machine Learning, MVT, MVC, Mobile Programming, Flutter, Backend Dev.
+CS Coursework: Digital Logic, Computer Architecture, Embedded System, Computer Vision, NLP, Embedded Systems, Artificial Intelligence, Operating System.
+Employment
+AI Engineer
+Pt Bagus Harapan Tritunggal
+Aug 2025 - Present
+Developed an AI Policy Simulator for the Ministry of Law and Human Rights (Kemenkumham) to model and analyze the potential impacts of new legal policies within the AHU Online ecosystem.
+Designed and deployed a Decision Support System utilizing Agentic AI to automate complex workflows and provide actionable, data-driven insights.
+Spearheaded the development of a high-performance Face Recognition Engine, integrating InsightFace, Ultralytics, MediaPipe, and Django. Implemented advanced anti-spoofing and precise landmark detection to ensure highly secure biometric verification.
+Architected and trained a custom Fish Recognition System for KNMP, overseeing the end-to-end machine learning pipeline from data processing to system deployment.
+Backend Engineer & Tech Lead
+Pt Orbit Tech Solution
+Jul 2023 - Aug 2025
+Led the architecture and development of complex backend systems for AI and Web3 applications, including a Real-World Asset (RWA) tokenization platform and a hyper-realistic AI golf simulator.
+Engineered predictive AI models using Physics-Informed Neural Networks (PINNs) and ANNs to accurately simulate physics and generate data-driven recommendations for fintech applications.
+Designed and implemented scalable backend solutions for smart farming (IoT integration) and multi-partner e-commerce platforms.
+Freelance
+
+
+Jan 2021 - Jul 2023
+Machine Learning Engineering
+freelancer as a full-stack developer
+
+
+
+
+Software Projects
+Enterprise Face Recognition API
+Designed and deployed a scalable face recognition system. Engineered the core pipeline using state-of-the-art vision models to handle accurate landmark detection and liveness analysis, seamlessly served via a robust backend.
+Utilized: Python, Django, InsightFace, Ultralytics, MediaPipe, OpenCV.
+AI Policy Simulator
+Developed a simulation tool leveraging Agentic AI to help government officials simulate, analyze, and predict the outcomes of implementing new legal policies before they are officially enacted.
+Utilized: Python, LLMs, Agentic Frameworks, Langchain, Ollama, Mcp, Django, Typescript.
+Product Expiration Reminder
+Application for expired product management combined with deep learning with Inception ResNet V2. Can recognize the expiration date of the product packaging and can identify the level of spoilage of a product without packaging. Equipped with a barcode scan to get detailed product information.
+Utilized: Jupyter Notebook, Python, Pandas, NumPy, Matplotlib, Tensorflow, Djang.
+Karpous - Real-World Asset (RWA) Platform
+Led the end-to-end backend architecture for a pioneering platform for investing in and managing tokenized real-world assets (RWAs).
+Designed and developed a complex hybrid system, tackling challenges in both centralized (Django) and decentralized (Web3) environments to ensure secure and scalable crypto transactions.
+Utilized: Django, Python, PostgreSQL, Web3, gRPC, Redis, MetaMask, React.
+Fairway Golf Engine - AI Simulation
+Spearheaded the architecture of a hyper-realistic golf simulator, overseeing the entire system from code infrastructure to ML model deployment.
+Engineered the core engine using a sophisticated physics engine combined with Physics-Informed Neural Networks (PINNs) and ANNs to accurately predict ball trajectory and resting position.
+Utilized: Python, PyTorch, Django, PostGIS, PINNs, ANNs, REST APIs.
+OnFarm - Smart Farming IoT Platform
+Designed the core backend architecture for a smart farming application connecting investors and farmers through real-time, verifiable data.
+Integrated various IoT devices to stream and process live field data, enhancing transparency and operational efficiency in the agricultural investment process.
+Utilized: Django, Python, gRPC, MPTT, IoT, Grafana, PostgreSQL, REST APIs.
+Quantitative Trading Bot
+Developed an AI-driven system to provide actionable stock investment recommendations by analyzing market data and identifying predictive patterns.
+Managed the full project lifecycle from data processing and model development (Scikit-learn, Tensorflow) to deploying a REST API for delivering insights.
+Utilized: Python, Pandas, Scikit-learn, Tensorflow, Backtesting, REST APIs.
+Additional Experience and Awards
+Data Analyst: Awarded a certificate as a data analyst from DQLab and Xeratic.
+AI Mastery: Orbit Future Academy
+
+
+Skills
+Software: (proficient): Python, Go, Javascript, Tensorflow, OpenCV, Keras, Apache Kafka, Redis, PyTorch, Embedding System, LLM, Flutter, Flask, Django, PostgreSQL, Unix, Git (familiar): Java, SQL, Dart, Jupyter, AWS, Flutter, HTML/CSS, Excel.
+
+

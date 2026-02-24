@@ -7,16 +7,17 @@ import { throttle } from '@utils';
 import { navLinks, navHeight } from '@config';
 import { Menu } from '@components';
 import { IconLogo } from '@components/icons';
+import ThemeToggle from '@components/themeToggle';
 import styled from 'styled-components';
 import { theme, mixins, media } from '@styles';
-const { colors, fontSizes, fonts, loaderDelay } = theme;
+const { fontSizes, fonts, loaderDelay } = theme;
 
 const StyledContainer = styled.header`
   ${mixins.flexBetween};
   position: fixed;
   top: 0;
   padding: 0px 50px;
-  background-color: ${colors.navy};
+  background-color: ${props => props.theme.colors.navy};
   transition: ${theme.transition};
   z-index: 11;
   filter: none !important;
@@ -25,7 +26,7 @@ const StyledContainer = styled.header`
   width: 100%;
   height: ${props => (props.scrollDirection === 'none' ? theme.navHeight : theme.navScrollHeight)};
   box-shadow: ${props =>
-    props.scrollDirection === 'up' ? `0 10px 30px -10px ${colors.shadowNavy}` : 'none'};
+    props.scrollDirection === 'up' ? `0 10px 30px -10px ${props.theme.colors.shadowNavy}` : 'none'};
   transform: translateY(
     ${props => (props.scrollDirection === 'down' ? `-${theme.navScrollHeight}` : '0px')}
   );
@@ -36,7 +37,7 @@ const StyledNav = styled.nav`
   ${mixins.flexBetween};
   position: relative;
   width: 100%;
-  color: ${colors.lightestSlate};
+  color: ${props => props.theme.colors.lightestSlate};
   font-family: ${fonts.SFMono};
   counter-reset: item 0;
   z-index: 12;
@@ -45,13 +46,13 @@ const StyledLogo = styled.div`
   ${mixins.flexCenter};
   a {
     display: block;
-    color: ${colors.green};
+    color: ${props => props.theme.colors.green};
     width: 42px;
     height: 42px;
     &:hover,
     &:focus {
       svg {
-        fill: ${colors.transGreen};
+        fill: ${props => props.theme.colors.transGreen};
       }
     }
     svg {
@@ -84,7 +85,7 @@ const StyledHamburgerBox = styled.div`
   height: 24px;
 `;
 const StyledHamburgerInner = styled.div`
-  background-color: ${colors.green};
+  background-color: ${props => props.theme.colors.green};
   position: absolute;
   width: ${theme.hamburgerWidth}px;
   height: 2px;
@@ -103,7 +104,7 @@ const StyledHamburgerInner = styled.div`
   &:after {
     content: '';
     display: block;
-    background-color: ${colors.green};
+    background-color: ${props => props.theme.colors.green};
     position: absolute;
     left: auto;
     right: 0;
@@ -146,7 +147,7 @@ const StyledListItem = styled.li`
   &:before {
     content: '0' counter(item) '.';
     text-align: right;
-    color: ${colors.green};
+    color: ${props => props.theme.colors.green};
     font-size: ${fontSizes.xs};
   }
 `;
@@ -281,7 +282,8 @@ class Nav extends Component {
                     <CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
                       <StyledListItem
                         key={i}
-                        style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
+                        style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}
+                      >
                         <StyledListLink to={url}>{name}</StyledListLink>
                       </StyledListItem>
                     </CSSTransition>
@@ -296,9 +298,25 @@ class Nav extends Component {
                     <StyledResumeButton
                       href="/resume.pdf"
                       target="_blank"
-                      rel="nofollow noopener noreferrer">
+                      rel="nofollow noopener noreferrer"
+                    >
                       Resume
                     </StyledResumeButton>
+                  </div>
+                </CSSTransition>
+              )}
+            </TransitionGroup>
+
+            <TransitionGroup component={null}>
+              {isMounted && (
+                <CSSTransition classNames={fadeDownClass} timeout={timeout}>
+                  <div
+                    style={{
+                      transitionDelay: `${isHome ? (navLinks.length + 1) * 100 : 0}ms`,
+                      marginLeft: '15px',
+                    }}
+                  >
+                    <ThemeToggle />
                   </div>
                 </CSSTransition>
               )}

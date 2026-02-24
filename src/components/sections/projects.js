@@ -6,8 +6,8 @@ import sr from '@utils/sr';
 import { srConfig } from '@config';
 import { FormattedIcon } from '@components/icons';
 import styled from 'styled-components';
-import { theme, mixins, media, Section, Button } from '@styles';
-const { colors, fontSizes, fonts } = theme;
+import { theme, mixins, media, Section } from '@styles';
+const { fontSizes, fonts } = theme;
 
 const StyledContainer = styled(Section)`
   ${mixins.flexCenter};
@@ -54,7 +54,7 @@ const StyledProjectInner = styled.div`
   height: 100%;
   border-radius: ${theme.borderRadius};
   transition: ${theme.transition};
-  background-color: ${colors.lightNavy};
+  background-color: ${props => props.theme.colors.lightNavy};
 `;
 const StyledProject = styled.div`
   transition: ${theme.transition};
@@ -72,7 +72,7 @@ const StyledProjectHeader = styled.div`
   margin-bottom: 30px;
 `;
 const StyledFolder = styled.div`
-  color: ${colors.green};
+  color: ${props => props.theme.colors.green};
   svg {
     width: 40px;
     height: 40px;
@@ -80,7 +80,7 @@ const StyledFolder = styled.div`
 `;
 const StyledProjectLinks = styled.div`
   margin-right: -10px;
-  color: ${colors.lightSlate};
+  color: ${props => props.theme.colors.lightSlate};
 `;
 const StyledIconLink = styled.a`
   position: relative;
@@ -94,11 +94,11 @@ const StyledIconLink = styled.a`
 const StyledProjectName = styled.h5`
   margin: 0 0 10px;
   font-size: ${fontSizes.xxl};
-  color: ${colors.lightestSlate};
+  color: ${props => props.theme.colors.lightestSlate};
 `;
 const StyledProjectDescription = styled.div`
   font-size: 17px;
-  color: ${colors.lightSlate};
+  color: ${props => props.theme.colors.lightSlate};
   a {
     ${mixins.inlineLink};
   }
@@ -115,7 +115,7 @@ const StyledTechList = styled.ul`
   li {
     font-family: ${fonts.SFMono};
     font-size: ${fontSizes.xs};
-    color: ${colors.green};
+    color: ${props => props.theme.colors.green};
     line-height: 1.75;
     margin-right: 15px;
     &:last-of-type {
@@ -123,12 +123,8 @@ const StyledTechList = styled.ul`
     }
   }
 `;
-const StyledMoreButton = styled(Button)`
-  margin: 100px auto 0;
-`;
-
 const Projects = ({ data }) => {
-  const [showMore, setShowMore] = useState(false);
+  const [showMore, setShowMore] = useState(false); // eslint-disable-line no-unused-vars
   const revealTitle = useRef(null);
   const revealArchiveLink = useRef(null);
   const revealProjects = useRef([]);
@@ -162,14 +158,16 @@ const Projects = ({ data }) => {
                   key={i}
                   classNames="fadeup"
                   timeout={i >= GRID_LIMIT ? (i - GRID_LIMIT) * 300 : 300}
-                  exit={false}>
+                  exit={false}
+                >
                   <StyledProject
                     key={i}
                     ref={el => (revealProjects.current[i] = el)}
                     tabIndex="0"
                     style={{
                       transitionDelay: `${i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0}ms`,
-                    }}>
+                    }}
+                  >
                     <StyledProjectInner>
                       <header>
                         <StyledProjectHeader>
@@ -182,7 +180,8 @@ const Projects = ({ data }) => {
                                 href={github}
                                 target="_blank"
                                 rel="nofollow noopener noreferrer"
-                                aria-label="GitHub Link">
+                                aria-label="GitHub Link"
+                              >
                                 <FormattedIcon name="GitHub" />
                               </StyledIconLink>
                             )}
@@ -191,7 +190,8 @@ const Projects = ({ data }) => {
                                 href={external}
                                 target="_blank"
                                 rel="nofollow noopener noreferrer"
-                                aria-label="External Link">
+                                aria-label="External Link"
+                              >
                                 <FormattedIcon name="External" />
                               </StyledIconLink>
                             )}

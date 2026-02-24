@@ -1,5 +1,5 @@
 ---
-date: '19-12-2023'
+date: '2023-12-19'
 title: 'Orbit Commerce'
 cover: 'demo.png'
 github: 'https://github.com/rissets'
@@ -9,8 +9,8 @@ tech:
   - Python
   - REST APIs
   - Celery
-  - Postgresql
+  - PostgreSQL
 showInProjects: true
 ---
 
-I designed and developed the complete backend infrastructure for a flexible, multi-partner e-commerce marketplace. The architecture supports multiple vendors on a single platform, with features including product management, order processing, and an integrated invoicing system. The system was built to be scalable and robust, handling complex business logic for commission, payments, and vendor management.
+Designed and developed the complete backend infrastructure for a flexible, multi-partner e-commerce marketplace. The architecture supports multiple vendors on a single platform with features including product management, order processing, and an integrated invoicing system. Built to handle complex business logic for commission, payments, and vendor management at scale.

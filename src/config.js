@@ -1,15 +1,15 @@
 module.exports = {
-  siteTitle: 'Danang Haris Setiawan | Software Engineer',
+  siteTitle: 'Danang Haris Setiawan | AI Engineer & Backend Developer',
   siteDescription:
-    'Danang Haris Setiawan is a Software Engineer, who loves learning new things and helping tech beginners.',
+    'Danang Haris Setiawan is an AI Engineer & Backend Developer specializing in building production-grade AI systems, from face recognition engines to agentic AI platforms.',
   siteKeywords:
-    'Danang Haris Setiawan, Danang Haris, Risset, Darisset, software engineer, web developer, data analysis, web developer, javascript, danang haris github, portfolio danang haris, risset social, DHS, sikwa dafica indah yuniarta, haris',
+    'Danang Haris Setiawan, AI Engineer, Backend Developer, Machine Learning, Django, Python, PyTorch, Tensorflow, LLM, Langchain, Web3, Software Engineer, portfolio',
   siteUrl: 'https://hi.rissets.com',
   siteLanguage: 'en_US',
   googleAnalyticsID: 'UA-162553650-2',
   googleVerification: 'google-site-verification=JYYngNZL55JU67S6KYbLwZXFC7SbNYqLVU5Xipz9tK8',
   name: 'Danang Haris Setiawan',
-  location: 'Tuban, East Java, Indonesia',
+  location: 'Setiabudi, Jakarta Selatan, Indonesia',
   email: 'hi@rissets.com',
   github: 'https://github.com/rissets',
   twitterHandle: '@_risset',
@@ -44,6 +44,10 @@ module.exports = {
     {
       name: 'Projects',
       url: '/#projects',
+    },
+    {
+      name: 'Blog',
+      url: '/pensieve',
     },
     {
       name: 'Contact',

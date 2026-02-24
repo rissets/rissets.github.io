@@ -21,12 +21,13 @@ import msIcon144x144 from '@images/favicons/ms-icon-144x144.png';
 
 const Head = ({ metadata }) => (
   <Helmet>
+    {/* eslint-disable-next-line react/no-unknown-property */}
     <html lang="en" prefix="og: http://ogp.me/ns#" />
     <title itemProp="name" lang="en">
       {metadata.title}
     </title>
     <link rel="shortcut icon" href={favicon} />
-    <link rel="canonical" href="https://danangharissetiawan.github.io" />
+    <link rel="canonical" href="https://hi.rissets.com" />
 
     <meta name="description" content={metadata.description} />
     <meta name="keywords" content={config.siteKeywords} />

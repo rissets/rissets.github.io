@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
+import styled, { ThemeProvider } from 'styled-components';
 import { Head, Loader, Nav, Social, Email, Footer } from '@components';
-import styled from 'styled-components';
+import { ThemeContextProvider, useThemeContext } from '../context/ThemeContext';
 import { GlobalStyle, theme } from '@styles';
-const { colors, fontSizes, fonts } = theme;
+import { darkTheme, lightTheme } from '@styles/theme';
+const { fontSizes, fonts } = theme;
 
 // https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== 'undefined') {
@@ -23,8 +25,8 @@ const SkipToContent = styled.a`
   &:focus,
   &:active {
     outline: 0;
-    color: ${colors.green};
-    background-color: ${colors.lightNavy};
+    color: ${props => props.theme.colors.green};
+    background-color: ${props => props.theme.colors.lightNavy};
     border-radius: ${theme.borderRadius};
     padding: 18px 23px;
     font-size: ${fontSizes.sm};
@@ -47,9 +49,11 @@ const StyledContent = styled.div`
   min-height: 100vh;
 `;
 
-const Layout = ({ children, location }) => {
+const LayoutInner = ({ children, location }) => {
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
+  const { isDarkMode } = useThemeContext();
+  const currentTheme = isDarkMode ? darkTheme : lightTheme;
 
   useEffect(() => {
     if (isLoading) {
@@ -68,45 +72,58 @@ const Layout = ({ children, location }) => {
   }, [isLoading]);
 
   return (
-    <StaticQuery
-      query={graphql`
-        query LayoutQuery {
-          site {
-            siteMetadata {
-              title
-              siteUrl
-              description
+    <ThemeProvider theme={currentTheme}>
+      <StaticQuery
+        query={graphql`
+          query LayoutQuery {
+            site {
+              siteMetadata {
+                title
+                siteUrl
+                description
+              }
             }
           }
-        }
-      `}
-      render={({ site }) => (
-        <div id="root">
-          <Head metadata={site.siteMetadata} />
+        `}
+        render={({ site }) => (
+          <div id="root">
+            <Head metadata={site.siteMetadata} />
 
-          <GlobalStyle />
+            <GlobalStyle />
 
-          <SkipToContent href="#content">Skip to Content</SkipToContent>
+            <SkipToContent href="#content">Skip to Content</SkipToContent>
 
-          {isLoading && isHome ? (
-            <Loader finishLoading={() => setIsLoading(false)} />
-          ) : (
-            <StyledContent>
-              <Nav isHome={isHome} />
-              <Social isHome={isHome} />
-              <Email isHome={isHome} />
+            {isLoading && isHome ? (
+              <Loader finishLoading={() => setIsLoading(false)} />
+            ) : (
+              <StyledContent>
+                <Nav isHome={isHome} />
+                <Social isHome={isHome} />
+                <Email isHome={isHome} />
 
-              <div id="content">
-                {children}
-                <Footer />
-              </div>
-            </StyledContent>
-          )}
-        </div>
-      )}
-    />
+                <div id="content">
+                  {children}
+                  <Footer />
+                </div>
+              </StyledContent>
+            )}
+          </div>
+        )}
+      />
+    </ThemeProvider>
   );
 };
+
+LayoutInner.propTypes = {
+  children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequired,
+};
+
+const Layout = ({ children, location }) => (
+  <ThemeContextProvider>
+    <LayoutInner location={location}>{children}</LayoutInner>
+  </ThemeContextProvider>
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

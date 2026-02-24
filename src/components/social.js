@@ -4,8 +4,6 @@ import { socialMedia } from '@config';
 import { Side } from '@components';
 import { FormattedIcon } from '@components/icons';
 import styled from 'styled-components';
-import { theme } from '@styles';
-const { colors } = theme;
 
 const StyledList = styled.ul`
   display: flex;
@@ -21,7 +19,7 @@ const StyledList = styled.ul`
     width: 1px;
     height: 90px;
     margin: 0 auto;
-    background-color: ${colors.lightSlate};
+    background-color: ${props => props.theme.colors.lightSlate};
   }
 
   li:last-of-type {
@@ -50,7 +48,8 @@ const Social = ({ isHome }) => (
               href={url}
               target="_blank"
               rel="nofollow noopener noreferrer"
-              aria-label={name}>
+              aria-label={name}
+            >
               <FormattedIcon name={name} />
             </StyledLink>
           </li>

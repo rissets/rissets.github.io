@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { navLinks } from '@config';
+import ThemeToggle from '@components/themeToggle';
 import styled from 'styled-components';
 import { theme, mixins, media } from '@styles';
-const { colors, fontSizes, fonts } = theme;
+const { fontSizes, fonts } = theme;
 
 const StyledContainer = styled.div`
   position: fixed;
@@ -24,7 +25,7 @@ const StyledContainer = styled.div`
 const Sidebar = styled.aside`
   ${mixins.flexCenter};
   flex-direction: column;
-  background-color: ${colors.lightNavy};
+  background-color: ${props => props.theme.colors.lightNavy};
   padding: 50px;
   width: 50vw;
   height: 100%;
@@ -32,7 +33,7 @@ const Sidebar = styled.aside`
   right: 0;
   margin-left: auto;
   font-family: ${fonts.SFMono};
-  box-shadow: -10px 0px 30px -15px ${colors.shadowNavy};
+  box-shadow: -10px 0px 30px -15px ${props => props.theme.colors.shadowNavy};
   ${media.thone`padding: 25px;`};
   ${media.phablet`width: 75vw;`};
   ${media.tiny`padding: 10px;`};
@@ -42,7 +43,7 @@ const NavLinks = styled.nav`
   width: 100%;
   flex-direction: column;
   text-align: center;
-  color: ${colors.lightestSlate};
+  color: ${props => props.theme.colors.lightestSlate};
 `;
 const NavList = styled.ol`
   padding: 0;
@@ -63,7 +64,7 @@ const NavListItem = styled.li`
   &:before {
     display: block;
     content: '0' counter(item) '.';
-    color: ${colors.green};
+    color: ${props => props.theme.colors.green};
     font-size: ${fontSizes.sm};
     margin-bottom: 5px;
   }
@@ -78,6 +79,9 @@ const ResumeLink = styled.a`
   padding: 18px 50px;
   margin: 10% auto 0;
   width: max-content;
+`;
+const StyledThemeToggleWrapper = styled.div`
+  margin-top: 20px;
 `;
 
 const Menu = ({ menuOpen, toggleMenu }) => {
@@ -96,7 +100,8 @@ const Menu = ({ menuOpen, toggleMenu }) => {
       menuOpen={menuOpen}
       onClick={handleMenuClick}
       aria-hidden={!menuOpen}
-      tabIndex={menuOpen ? 1 : -1}>
+      tabIndex={menuOpen ? 1 : -1}
+    >
       <Sidebar>
         <NavLinks>
           <NavList>
@@ -110,6 +115,9 @@ const Menu = ({ menuOpen, toggleMenu }) => {
           <ResumeLink href="/resume.pdf" target="_blank" rel="nofollow noopener noreferrer">
             Resume
           </ResumeLink>
+          <StyledThemeToggleWrapper>
+            <ThemeToggle />
+          </StyledThemeToggleWrapper>
         </NavLinks>
       </Sidebar>
     </StyledContainer>

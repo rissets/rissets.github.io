@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import theme from './theme';
 import media from './media';
-const { colors, fontSizes, fonts } = theme;
+const { fontSizes, fonts } = theme;
 
 const Heading = styled.h3`
   position: relative;
@@ -19,7 +19,7 @@ const Heading = styled.h3`
     margin-right: 10px;
     font-family: ${fonts.SFMono};
     font-weight: normal;
-    color: ${colors.green};
+    color: ${props => props.theme.colors.green};
     font-size: ${fontSizes.xl};
     position: relative;
     bottom: 4px;
@@ -31,7 +31,7 @@ const Heading = styled.h3`
     display: block;
     height: 1px;
     width: 300px;
-    background-color: ${colors.lightestNavy};
+    background-color: ${props => props.theme.colors.lightestNavy};
     position: relative;
     top: -5px;
     margin-left: 20px;

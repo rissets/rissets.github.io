@@ -4,7 +4,7 @@ import sr from '@utils/sr';
 import { srConfig } from '@config';
 import styled from 'styled-components';
 import { theme, mixins, media, Section, Heading } from '@styles';
-const { colors, fontSizes, fonts } = theme;
+const { fontSizes, fonts } = theme;
 
 const StyledContainer = styled(Section)`
   position: relative;
@@ -67,29 +67,29 @@ const StyledTabButton = styled.button`
   height: ${theme.tabHeight}px;
   padding: 0 20px 2px;
   transition: ${theme.transition};
-  border-left: 2px solid ${colors.lightestNavy};
+  border-left: 2px solid ${props => props.theme.colors.lightestNavy};
   text-align: left;
   white-space: nowrap;
   font-family: ${fonts.SFMono};
   font-size: ${fontSizes.smish};
-  color: ${props => (props.isActive ? colors.green : colors.slate)};
+  color: ${props => (props.isActive ? props.theme.colors.green : props.theme.colors.slate)};
   ${media.tablet`padding: 0 15px 2px;`};
   ${media.thone`
     ${mixins.flexCenter};
     padding: 0 15px;
     text-align: center;
     border-left: 0;
-    border-bottom: 2px solid ${colors.lightestNavy};
+    border-bottom: 2px solid ${props => props.theme.colors.lightestNavy};
     min-width: 120px;
   `};
   &:hover,
   &:focus {
-    background-color: ${colors.lightNavy};
+    background-color: ${props => props.theme.colors.lightNavy};
   }
 `;
 const StyledHighlight = styled.span`
   display: block;
-  background: ${colors.green};
+  background: ${props => props.theme.colors.green};
   width: 2px;
   height: ${theme.tabHeight}px;
   border-radius: ${theme.borderRadius};
@@ -134,20 +134,20 @@ const StyledTabContent = styled.div`
   }
 `;
 const StyledJobTitle = styled.h4`
-  color: ${colors.lightestSlate};
+  color: ${props => props.theme.colors.lightestSlate};
   font-size: ${fontSizes.xxl};
   font-weight: 500;
   margin-bottom: 5px;
 `;
 const StyledCompany = styled.span`
-  color: ${colors.green};
+  color: ${props => props.theme.colors.green};
 `;
 const StyledJobDetails = styled.h5`
   font-family: ${fonts.SFMono};
   font-size: ${fontSizes.smish};
   font-weight: normal;
   letter-spacing: 0.05em;
-  color: ${colors.lightSlate};
+  color: ${props => props.theme.colors.lightSlate};
   margin-bottom: 30px;
   svg {
     width: 15px;
@@ -211,7 +211,8 @@ const Jobs = ({ data }) => {
                     role="tab"
                     aria-selected={activeTabId === i ? true : false}
                     aria-controls={`panel-${i}`}
-                    tabIndex={activeTabId === i ? '0' : '-1'}>
+                    tabIndex={activeTabId === i ? '0' : '-1'}
+                  >
                     <span>{company}</span>
                   </StyledTabButton>
                 </li>
@@ -232,7 +233,8 @@ const Jobs = ({ data }) => {
                 role="tabpanel"
                 aria-labelledby={`tab-${i}`}
                 tabIndex={activeTabId === i ? '0' : '-1'}
-                hidden={activeTabId !== i}>
+                hidden={activeTabId !== i}
+              >
                 <StyledJobTitle>
                   <span>{title}</span>
                   <StyledCompany>

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { Layout } from '@components';
 import styled from 'styled-components';
 import { theme, mixins, Main } from '@styles';
-const { colors, fontSizes, fonts } = theme;
+const { fontSizes, fonts } = theme;
 
 const StyledTagsContainer = styled(Main)`
   max-width: 1000px;
@@ -15,15 +15,15 @@ const StyledTagsContainer = styled(Main)`
     margin-bottom: 50px;
   }
   ul {
-    color: ${colors.lightSlate};
+    color: ${props => props.theme.colors.lightSlate};
     li {
       font-size: ${fontSizes.xxl};
 
       a {
         ${mixins.inlineLink};
-        color: ${colors.lightSlate};
+        color: ${props => props.theme.colors.lightSlate};
         .count {
-          color: ${colors.slate};
+          color: ${props => props.theme.colors.slate};
           font-family: ${fonts.SFMono};
           font-size: ${fontSizes.md};
         }
@@ -93,7 +93,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(limit: 2000, filter: { frontmatter: { draft: { ne: true } } }) {
-      group(field: frontmatter___tags) {
+      group(field: { frontmatter: { tags: SELECT } }) {
         fieldValue
         totalCount
       }
